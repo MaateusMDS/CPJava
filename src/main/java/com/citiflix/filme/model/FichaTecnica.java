@@ -1,9 +1,11 @@
 package com.citiflix.filme.model;
 
+import com.citiflix.filme.model.dados.InserirFichaTecnica;
 import jakarta.persistence.Embeddable;
 
 @Embeddable
 public class FichaTecnica {
+
 
     private String direcao;
     private String elenco;
@@ -14,12 +16,16 @@ public class FichaTecnica {
     public FichaTecnica() {
     }
 
-    public FichaTecnica(String direcao, String elenco, String roteiro, Integer classificacaoIndicativa, String producao) {
-        this.direcao = direcao;
-        this.elenco = elenco;
-        this.roteiro = roteiro;
-        this.classificacaoIndicativa = classificacaoIndicativa;
-        this.producao = producao;
+    public FichaTecnica(InserirFichaTecnica dados){
+        this.direcao = dados.direcao();
+        this.elenco = dados.elenco();
+        this.roteiro = dados.roteiro();
+        this.classificacaoIndicativa = dados.classificacaoIndicativa();
+        this.producao = dados.producao();
+    }
+
+    public FichaTecnica(FichaTecnica fichaTecnica) {
+
     }
 
     public String getDirecao() {
