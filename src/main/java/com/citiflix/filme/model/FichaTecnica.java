@@ -10,22 +10,18 @@ public class FichaTecnica {
     private String direcao;
     private String elenco;
     private String roteiro;
-    private Integer classificacaoIndicativa;
+    private int classificacaoIndicativa;
     private String producao;
 
     public FichaTecnica() {
     }
 
-    public FichaTecnica(InserirFichaTecnica dados){
+    public FichaTecnica(InserirFichaTecnica dados) {
         this.direcao = dados.direcao();
         this.elenco = dados.elenco();
         this.roteiro = dados.roteiro();
         this.classificacaoIndicativa = dados.classificacaoIndicativa();
         this.producao = dados.producao();
-    }
-
-    public FichaTecnica(FichaTecnica fichaTecnica) {
-
     }
 
     public String getDirecao() {
@@ -55,11 +51,11 @@ public class FichaTecnica {
         return this;
     }
 
-    public Integer getClassificacaoIndicativa() {
+    public int getClassificacaoIndicativa() {
         return classificacaoIndicativa;
     }
 
-    public FichaTecnica setClassificacaoIndicativa(Integer classificacaoIndicativa) {
+    public FichaTecnica setClassificacaoIndicativa(int classificacaoIndicativa) {
         this.classificacaoIndicativa = classificacaoIndicativa;
         return this;
     }
@@ -73,5 +69,3 @@ public class FichaTecnica {
         return this;
     }
 }
-
-

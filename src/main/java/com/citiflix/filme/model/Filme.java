@@ -24,22 +24,13 @@ public class Filme {
     public Filme() {
     }
 
-    public Filme(Long id, String titulo, String atorPrincipal, Integer duracao, Year anoLancamento, Genero genero, FichaTecnica fichaTecnica) {
-        this.id = id;
-        this.titulo = titulo;
-        this.atorPrincipal = atorPrincipal;
-        this.duracao = duracao;
-        this.anoLancamento = anoLancamento;
-        this.genero = genero;
-        this.fichaTecnica = fichaTecnica;
-    }
-    public Filme(InserirFilme dados) {
+    public Filme (InserirFilme dados) {
         this.titulo = dados.titulo();
         this.atorPrincipal = dados.atorPrincipal();
         this.duracao = dados.duracao();
         this.anoLancamento = Year.parse(dados.anoLancamento());
         this.genero = dados.genero();
-        this.fichaTecnica = new FichaTecnica(dados.fichaTecnica());
+        this.fichaTecnica = dados.fichaTecnica();
     }
 
     public Long getId() {
