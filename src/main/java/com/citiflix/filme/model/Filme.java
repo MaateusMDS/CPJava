@@ -1,9 +1,9 @@
 package com.citiflix.filme.model;
 
-import com.citiflix.filme.model.dados.InserirFilme;
+import com.citiflix.filme.dados.AtualizarFilme;
+import com.citiflix.filme.dados.InserirFilme;
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
 import java.time.Year;
 
 @Entity(name = "Citiflix")
@@ -20,17 +20,44 @@ public class Filme {
     private Genero genero;
     @Embedded
     private FichaTecnica fichaTecnica;
+    private boolean visivel;
 
     public Filme() {
     }
 
-    public Filme (InserirFilme dados) {
+    public Filme(InserirFilme dados) {
         this.titulo = dados.titulo();
         this.atorPrincipal = dados.atorPrincipal();
         this.duracao = dados.duracao();
-        this.anoLancamento = Year.parse(dados.anoLancamento());
+        this.anoLancamento = dados.anoLancamento();
         this.genero = dados.genero();
-        this.fichaTecnica = dados.fichaTecnica();
+        this.fichaTecnica = new FichaTecnica(dados.fichaTecnica());
+        this.visivel = true;
+    }
+
+    public void atualizarFilme(AtualizarFilme dados){
+        if (dados.titulo() != null) {
+            this.titulo = dados.titulo();
+        }
+        if (dados.atorPrincipal() != null) {
+            this.atorPrincipal = dados.atorPrincipal();
+        }
+        if (dados.duracao() != null) {
+            this.duracao = dados.duracao();
+        }
+        if (dados.anoLancamento() != null) {
+            this.anoLancamento = dados.anoLancamento();
+        }
+        if (dados.genero() != null) {
+            this.genero = dados.genero();
+        }
+        if (dados.fichaTecnica() != null) {
+            this.fichaTecnica = new FichaTecnica(dados.fichaTecnica());
+        }
+    }
+
+    public void apagarFilme(){
+        this.visivel = false;
     }
 
     public Long getId() {
@@ -93,6 +120,15 @@ public class Filme {
 
     public Filme setFichaTecnica(FichaTecnica fichaTecnica) {
         this.fichaTecnica = fichaTecnica;
+        return this;
+    }
+
+    public boolean isVisivel() {
+        return visivel;
+    }
+
+    public Filme setVisivel(boolean visivel) {
+        this.visivel = visivel;
         return this;
     }
 }

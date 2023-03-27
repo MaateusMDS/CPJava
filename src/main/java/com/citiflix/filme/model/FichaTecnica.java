@@ -1,27 +1,52 @@
 package com.citiflix.filme.model;
 
-import com.citiflix.filme.model.dados.InserirFichaTecnica;
+import com.citiflix.filme.dados.DadosFichaTecnica;
 import jakarta.persistence.Embeddable;
 
 @Embeddable
 public class FichaTecnica {
 
-
     private String direcao;
     private String elenco;
     private String roteiro;
-    private int classificacaoIndicativa;
+    private Integer classificacaoIndicativa;
     private String producao;
 
     public FichaTecnica() {
     }
 
-    public FichaTecnica(InserirFichaTecnica dados) {
+    public FichaTecnica(DadosFichaTecnica dados) {
         this.direcao = dados.direcao();
         this.elenco = dados.elenco();
         this.roteiro = dados.roteiro();
         this.classificacaoIndicativa = dados.classificacaoIndicativa();
         this.producao = dados.producao();
+    }
+
+    public void atualizar(DadosFichaTecnica dados) {
+        if (dados.direcao() != null) {
+            this.direcao = dados.direcao();
+        }
+        if (dados.elenco() != null) {
+            this.elenco = dados.elenco();
+        }
+        if (dados.roteiro() != null) {
+            this.roteiro = dados.roteiro();
+        }
+        if (dados.classificacaoIndicativa() != null) {
+            this.classificacaoIndicativa = dados.classificacaoIndicativa();
+        }
+        if (dados.producao() != null) {
+            this.producao = dados.producao();
+        }
+    }
+
+    public FichaTecnica(String direcao, String elenco, String roteiro, Integer classificacaoIndicativa, String producao) {
+        this.direcao = direcao;
+        this.elenco = elenco;
+        this.roteiro = roteiro;
+        this.classificacaoIndicativa = classificacaoIndicativa;
+        this.producao = producao;
     }
 
     public String getDirecao() {
@@ -51,11 +76,11 @@ public class FichaTecnica {
         return this;
     }
 
-    public int getClassificacaoIndicativa() {
+    public Integer getClassificacaoIndicativa() {
         return classificacaoIndicativa;
     }
 
-    public FichaTecnica setClassificacaoIndicativa(int classificacaoIndicativa) {
+    public FichaTecnica setClassificacaoIndicativa(Integer classificacaoIndicativa) {
         this.classificacaoIndicativa = classificacaoIndicativa;
         return this;
     }
