@@ -10,7 +10,6 @@ import com.citiflix.filme.model.Filme;
 import com.citiflix.filme.model.Genero;
 
 public record ListarFilme(
-        Long id,
         String titulo,
         String atorPrincipal,
         Integer duracao,
@@ -19,7 +18,6 @@ public record ListarFilme(
 ) {
     public ListarFilme(Filme filme) {
         this (
-                filme.getId(),
                 filme.getTitulo(),
                 filme.getAtorPrincipal(),
                 filme.getDuracao(),
