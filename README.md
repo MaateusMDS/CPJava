@@ -40,7 +40,7 @@ Projeto desenvolvido em volta de conceitas do Spring Framework, onde iremos real
     "atorPrincipal": "Marlon Brando",
     "duracao": 175,
     "anoLancamento": 1972,
-    "genero": "Drama",
+    "genero": "DRAMA",
     "fichaTecnica": {
         "direcao": "Francis Ford Coppola",
         "elenco": "Marlon Brando, Al Pacino, James Caan",
@@ -57,7 +57,7 @@ Projeto desenvolvido em volta de conceitas do Spring Framework, onde iremos real
     "atorPrincipal": "Toshiro Mifune",
     "duracao": 207,
     "anoLancamento": 1954,
-    "genero": "Acao",
+    "genero": "ACAO",
     "fichaTecnica": {
         "direcao": "Akira Kurosawa",
         "elenco": "Toshiro Mifune, Takashi Shimura",
@@ -74,7 +74,7 @@ Projeto desenvolvido em volta de conceitas do Spring Framework, onde iremos real
     "atorPrincipal": "Anthony Hopkins",
     "duracao": 118,
     "anoLancamento": 1991,
-    "genero": "Suspense",
+    "genero": "SUSPENSE",
     "fichaTecnica": {
         "direcao": "Jonathan Demme",
         "elenco": "Jodie Foster, Anthony Hopkins",
@@ -91,7 +91,7 @@ Projeto desenvolvido em volta de conceitas do Spring Framework, onde iremos real
     "atorPrincipal": "Rumi Hiiragi",
     "duracao": 125,
     "anoLancamento": 2001,
-	"genero": "Animacao",
+	"genero": "ANIMACAO",
 	"fichaTecnica": {
         "direcao": "Hayao Miyazaki",
         "elenco": "Rumi Hiiragi, Miyu Irino, Mari Natsuki",
