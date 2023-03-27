@@ -6,11 +6,10 @@ Matheus Gomes Campolongo - RM94250
 package com.citiflix.filme.model;
 
 public enum Genero {
-
     SUSPENSE,
     COMEDIA,
     DRAMA,
     DOCUMENTARIO,
-    ACAOO,
-    FICCAO
+    ACAO,
+    FICCAO;
 }

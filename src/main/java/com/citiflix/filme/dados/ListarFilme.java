@@ -14,7 +14,7 @@ public record ListarFilme(
         String atorPrincipal,
         Integer duracao,
         Genero genero,
-        FichaTecnica fichaTecnica
+        String direcao
 ) {
     public ListarFilme(Filme filme) {
         this (
@@ -22,7 +22,7 @@ public record ListarFilme(
                 filme.getAtorPrincipal(),
                 filme.getDuracao(),
                 filme.getGenero(),
-                filme.getFichaTecnica()
+                filme.getFichaTecnica().getDirecao()
         );
     }
 }

@@ -31,6 +31,7 @@ public class Filme {
     }
 
     public Filme(InserirFilme dados) {
+
         this.titulo = dados.titulo();
         this.atorPrincipal = dados.atorPrincipal();
         this.duracao = dados.duracao();
