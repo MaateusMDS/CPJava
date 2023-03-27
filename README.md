@@ -108,10 +108,9 @@ Projeto desenvolvido em volta de conceitas do Spring Framework, onde iremos real
 ```
     {
     "titulo": "Os Oito Samurais",
-    "atorPrincipal": "Toshiro Mifune",
-    "duracao": 208,
-    "anoLancamento": 1953,
-    "genero": "ACAO",
+    "duracao": 212,
+    "anoLancamento": 1955,
+    "genero": "SUSPENSE",
     "fichaTecnica": {
 	    "classificacaoIndicativa": 16
 	}
