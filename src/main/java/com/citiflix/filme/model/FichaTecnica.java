@@ -1,3 +1,8 @@
+/*
+Mateus Mendes - RM95138
+Matheus Gomes Campolongo - RM94250
+*/
+
 package com.citiflix.filme.model;
 
 import com.citiflix.filme.dados.DadosFichaTecnica;
