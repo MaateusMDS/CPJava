@@ -56,7 +56,7 @@ public class Filme {
             this.genero = dados.genero();
         }
         if (dados.fichaTecnica() != null) {
-            this.fichaTecnica = new FichaTecnica(dados.fichaTecnica());
+            this.fichaTecnica.atualizar(dados.fichaTecnica());
         }
     }
 
