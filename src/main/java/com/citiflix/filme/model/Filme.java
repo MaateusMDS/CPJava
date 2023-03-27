@@ -9,8 +9,6 @@ import com.citiflix.filme.dados.AtualizarFilme;
 import com.citiflix.filme.dados.InserirFilme;
 import jakarta.persistence.*;
 
-import java.time.Year;
-
 @Entity(name = "Citiflix")
 @Table(name = "TB_CFX_FILME")
 public class Filme {
@@ -20,7 +18,7 @@ public class Filme {
     private String titulo;
     private String atorPrincipal;
     private Integer duracao;
-    private Year anoLancamento;
+    private Integer anoLancamento;
     @Enumerated(EnumType.STRING)
     private Genero genero;
     @Embedded
@@ -102,11 +100,11 @@ public class Filme {
         return this;
     }
 
-    public Year getAnoLancamento() {
+    public Integer getAnoLancamento() {
         return anoLancamento;
     }
 
-    public Filme setAnoLancamento(Year anoLancamento) {
+    public Filme setAnoLancamento(Integer anoLancamento) {
         this.anoLancamento = anoLancamento;
         return this;
     }

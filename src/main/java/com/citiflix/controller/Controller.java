@@ -30,7 +30,7 @@ public class Controller {
 
     @PostMapping
     @Transactional
-    public ResponseEntity<String> save(@RequestBody InserirFilme dados) {
+    public ResponseEntity<String> save(@RequestBody @Valid InserirFilme dados) {
         try {
             repository.save(new Filme(dados));
             return ResponseEntity.ok("O filme " + dados.titulo() + " foi inserido com sucesso!");
